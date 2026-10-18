@@ -1,0 +1,4 @@
+interface:
+  display_name: "Drama Craft 漫剧制作"
+  short_description: "从想法或剧本开始，统一设计资产、分镜提示词、声画生成、剪辑与验收"
+  default_prompt: "使用 $drama-craft 根据我的想法、剧本或现有素材，完成当前制作阶段的具体产物、提示词和检查。"
