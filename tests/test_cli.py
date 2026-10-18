@@ -93,6 +93,16 @@ class PublicPackageTests(unittest.TestCase):
         with contextlib.redirect_stderr(io.StringIO()):
             self.assertEqual(cli.main(['prompt', 'T99']), 1)
 
+    def test_zip_normalizes_text_bom_and_line_endings(self):
+        root = self.copy_public()
+        path = root / 'SKILL.md'
+        canonical = cli.read(path)
+        path.write_bytes(b'\xef\xbb\xbf' + canonical.replace('\n', '\r\n').encode('utf-8'))
+        archive = self.base / 'normalized.zip'
+        cli.pack(archive, root)
+        with zipfile.ZipFile(archive) as bundle:
+            self.assertEqual(bundle.read('drama-craft/SKILL.md'), canonical.encode('utf-8'))
+
     def test_missing_attribution_is_rejected(self):
         root = self.copy_public()
         (root / 'references/ATTRIBUTION.md').write_text('No credits.', encoding='utf-8')

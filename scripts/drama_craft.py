@@ -199,7 +199,7 @@ def pack(output: Path, root: Path = ROOT) -> None:
             info.create_system = 3
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
-            bundle.writestr(info, (root / name).read_bytes())
+            bundle.writestr(info, read(root / name).encode('utf-8'))
 
 
 def main(argv: list[str] | None = None) -> int:
