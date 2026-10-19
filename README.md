@@ -4,7 +4,7 @@
 
 An agent skill and a Chinese production playbook for narrative AI video. Includes 27 reusable prompts and a dependency-free Python utility. No model or generation credits are bundled.
 
-当前版本：0.2.0（预览版）。流程与工具可用；模型执行、声线、口型和成片观感仍需真实项目验证，不承诺一键自动出片。
+当前版本：0.2.1（预览版）。流程与工具可用；模型执行、声线、口型和成片观感仍需真实项目验证，不承诺一键自动出片。
 
 ## 先用哪一份
 
@@ -25,7 +25,7 @@ flowchart LR
 
 ## 安装为 Skill
 
-只安装Skill可下载[v0.2.0安装ZIP](https://github.com/yangcunbang2026-web/drama-craft/releases/download/v0.2.0/drama-craft-v0.2.0.zip)，解压后把`drama-craft`目录放入宿主支持的skills目录，保留其中署名与许可；已有同名私人版本请勿直接覆盖。ZIP只含可安装Skill，不包含CLI。
+只安装Skill可下载[v0.2.1安装ZIP](https://github.com/yangcunbang2026-web/drama-craft/releases/download/v0.2.1/drama-craft-v0.2.1.zip)，解压后把`drama-craft`目录放入宿主支持的skills目录，保留其中署名与许可；已有同名私人版本请勿直接覆盖。ZIP只含可安装Skill，不包含CLI。
 
 使用离线CLI或从源码安装，需要Git和Python 3.10+：
 
@@ -96,6 +96,8 @@ python -m unittest discover -s tests -v
 主线收为6个制作阶段；开工、返工与参考维护提供支持，共9个主章节。保留T00—T26完整提示词、虚构示例、源段接镜及验收依据。增加节拍轻重、可选静态联排、制作量取舍和工程可迁移交付。镜数、时长、音轨路线和平台由brief与真实能力决定。
 
 已有工程和可靠素材直接继承。没有知识库连接也能执行；有知识库时按项目权限取当前来源。媒体上传、付费、声音使用和发布按具体项目授权。CI检查结构与包完整性，不判断电影观感或真人口型质量。
+
+v0.2.1补清按当前阶段交付、统一风格与对白改写、尾图不支持时的替代、手动生成交接、无工程粗剪及字幕文件交付；27套提示词与六阶段保留，听看能力和未定位文件按实际范围记录。
 
 ## 贡献
 
