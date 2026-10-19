@@ -14,3 +14,7 @@ Drama Craft documentation and prompt wording are distributed under [CC BY 4.0](.
 General film concepts such as continuity, shot purpose, sound bridges and motivated lighting are explained in this project's own wording. The worked camera-repair example and public prompt wording were created for this edition. Private production scripts, paid-course source packs, local notes, media, generated voice samples, access tokens and project histories are not distributed here.
 
 Asset, performance, voice, model and service permissions are separate from this repository's license. Contributors should describe tested conditions accurately and preserve this notice when adapting the documentation.
+
+## v0.2.0 editorial revision
+
+The public workflow was condensed into six production stages plus intake, repair and reference support. This edition adds explicit beat-to-shot decisions, separates assistant task instructions from model inputs, and distinguishes drafts from user-confirmed scope. Public prompt IDs remain T00–T26; T04 and T10 were revised. The existing fictional repair-shop example is retained. No private-edition notes or project data are bundled. These are workflow recommendations, not a claim of completed audiovisual validation.

@@ -4,7 +4,7 @@
 
 An agent skill and a Chinese production playbook for narrative AI video. Includes 27 reusable prompts and a dependency-free Python utility. No model or generation credits are bundled.
 
-当前版本：0.1.0。流程与工具可用；模型执行、声线、口型和成片观感仍需真实项目验证，不承诺一键自动出片。
+当前版本：0.2.0（预览版）。流程与工具可用；模型执行、声线、口型和成片观感仍需真实项目验证，不承诺一键自动出片。
 
 ## 先用哪一份
 
@@ -25,7 +25,9 @@ flowchart LR
 
 ## 安装为 Skill
 
-需要 Git 和 Python 3.10+。以下从源代码安装，不使用远程安装脚本：
+只安装Skill可下载[v0.2.0安装ZIP](https://github.com/yangcunbang2026-web/drama-craft/releases/download/v0.2.0/drama-craft-v0.2.0.zip)，解压后把`drama-craft`目录放入宿主支持的skills目录，保留其中署名与许可；已有同名私人版本请勿直接覆盖。ZIP只含可安装Skill，不包含CLI。
+
+使用离线CLI或从源码安装，需要Git和Python 3.10+：
 
 ```sh
 git clone https://github.com/yangcunbang2026-web/drama-craft.git
@@ -85,11 +87,13 @@ python scripts/drama_craft.py pack --output dist/drama-craft-skill.zip
 python -m unittest discover -s tests -v
 ```
 
+`prompt`只输出模板及所给上下文，不调用模型或自动填写；助手须先完成分析与编译，再将适配的正文交给实际生成工具。
+
 初始化的主单包含制作约定、剧本位置、资产、逐镜卡、实际任务和检查状态。文字设计、媒体生成、可剪区间和完整声画验收分开记录。
 
 ## 内容与适配范围
 
-流程含20个主章节、T00—T26提示词、完整虚构示例、源片分段、参考职责、相邻接镜和返工诊断。镜数、时长、音轨路线和平台由brief与真实能力决定。
+主线收为6个制作阶段；开工、返工与参考维护提供支持，共9个主章节。保留T00—T26完整提示词、虚构示例、源段接镜及验收依据。增加节拍轻重、可选静态联排、制作量取舍和工程可迁移交付。镜数、时长、音轨路线和平台由brief与真实能力决定。
 
 已有工程和可靠素材直接继承。没有知识库连接也能执行；有知识库时按项目权限取当前来源。媒体上传、付费、声音使用和发布按具体项目授权。CI检查结构与包完整性，不判断电影观感或真人口型质量。
 
